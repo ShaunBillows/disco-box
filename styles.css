@@ -4,65 +4,70 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
     /* outline: 0.5px solid limegreen; */
-
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
-
-
 }
 
 body {
-    height: 100vh;
     display: flex;
     justify-content: center;
+}
+.container {
+    /* height: 100vh; */
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    background-color: #1E1E1E;
+    border-radius: 50px;
+    /* padding-bottom: 3rem; */
+}
 
-    /* border: 2px solid black; */
-
-    background-image: url('https://images.unsplash.com/photo-1549046675-dd779977de88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2143&q=80');
-    background-color: black;
-    background-size: cover;
-
-
+.title-cont {
+    padding: 1rem;
+    margin: 0.5rem;
 }
 
 .grid {
-    height: 40vh;
-    width: 60vw;
+    /* display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 0.5rem; */
 
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
 
-    /* outline: solid #028cd6 2px; */
-    /* background: linear-gradient(to right, #028cd6, rgba(12,4,35,255)); */
-    padding: 2rem;
-    margin-top: -10rem;
-    
+    width: 90vw;
+    max-width: 400px;
 
 }
 
 .inst {
-    /* height: 100%;
-    width: 100; */
-    /* border: 2px solid; */
-    /* padding: 2rem; */
-    /* outline: 0.2px solid #f24162; */
+    /* height: 100px;
+    width: 100px;
+    border-radius: 20px;
     background: linear-gradient(to right, rgba(12,4,35,255), #028cd6);
-    /* background-color: rgba(0, 38, 255, 0.4); */
-
     display: flex;
     justify-content: center;
     align-items: center;
 
+    cursor: pointer; */
+
+    aspect-ratio: 1/ 1;
+    display: flex;
+    align-items: center;
+    padding: 5%;
+    background-color: #1E1E1E;
+    border-radius: 20px;
+    background: linear-gradient(to right, rgba(12,4,35,255), #028cd6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 
 }
 
-.one {
-
-}
 
