@@ -15,7 +15,6 @@ body {
     justify-content: center;
 }
 .container {
-    /* height: 100vh; */
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -23,7 +22,6 @@ body {
     justify-content: center;
     background-color: #1E1E1E;
     border-radius: 50px;
-    /* padding-bottom: 3rem; */
 }
 
 .title-cont {
@@ -32,30 +30,15 @@ body {
 }
 
 .grid {
-    /* display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 0.5rem; */
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2%;
 
     width: 90vw;
     max-width: 400px;
-
 }
 
 .inst {
-    /* height: 100px;
-    width: 100px;
-    border-radius: 20px;
-    background: linear-gradient(to right, rgba(12,4,35,255), #028cd6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    cursor: pointer; */
-
     aspect-ratio: 1/ 1;
     display: flex;
     align-items: center;
