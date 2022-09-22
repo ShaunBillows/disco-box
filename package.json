@@ -1,12 +1,20 @@
 {
-  "name": "loop-pad",
+  "name": "disco-box",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShaunBillows/disco-box.git"
+  },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShaunBillows/disco-box/issues"
+  },
+  "homepage": "https://github.com/ShaunBillows/disco-box#readme"
 }
