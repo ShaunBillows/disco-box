@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const app = (bpm, instrumentNumber, path, fileType) => {
+
   const beatInterval = ((60 * 1000) / bpm) * 16; // miliseconds per 4 bars
   let startTime = 0;
 
@@ -11,24 +12,34 @@ const app = (bpm, instrumentNumber, path, fileType) => {
     .fill(0)
     .map((x, i) => new Instrument(`.pad-${i + 1}`, `${path}/${i + 1}.${fileType}`));
 
+  // add event listeners
   instruments.forEach((instrument) => {
     instrument.pad.addEventListener("click", () => {
-      setTimeout(() => {
-        instrument.isPlaying ? instrument.playAudio() : instrument.pauseAudio();
-      }, quantise(instruments));
-      instrument.setIsPlaying();
-      instrument.setPadColor();
+      playInstrument(instrument)
     });
   });
+
+  const playInstrument = (instrument) => {
+    setTimeout(() => {
+      instrument.isPlaying ? instrument.playAudio() : instrument.pauseAudio();
+    }, quantise(instruments));
+    instrument.setIsPlaying();
+    instrument.setPadColor();
+  }
 
   const quantise = () => {
     // returns time / ms till the next beat interval
     if (instruments.some((x) => x.isPlaying)) {
-      return beatInterval - ((Date.now() - startTime) % beatInterval);
+      return beatInterval - ((announceTime() - startTime) % beatInterval);
     } else {
       instruments.forEach((x) => console.log(x.isPlaying) )
-      startTime = Date.now();
+      startTime = announceTime();
       return 0;
     }
   };
+
+  const announceTime = (clock) => {
+    clock = clock || Date
+    return clock.now()
+  }
 };
