@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  app(126, 13, "/sounds", "mp3");
+  app(126, 13, "sounds", "mp3");
 });
 
 const app = (bpm, instrumentNumber, path, fileType) => {
